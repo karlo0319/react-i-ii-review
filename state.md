@@ -4,15 +4,25 @@ Answer these on your own, then compare answers as a group
 
 1.  What is state?
 
+  - Is an object (key value pairs) that is able to be accessed and updated
+  - Where we manage the data for our component
+  - React has a built in state object, where you store property values that belongs to the Class Component. When the state object changes the Component re-renders.
+  
 2.  Where do you set initial state?
 
+  - Inside the constructor of a class component right afte we call super.
+
 3.  What method do you use to update state?
+
+  - setState.
 
 ### Understand
 
 Discuss this question in pairs if you have a 4-person group
 
 4.  Explain what's happening in this component.
+
+Parent Component in a Class Component
 
 ```jsx
 import React, { Component } from "react";
@@ -54,7 +64,11 @@ Try these on your own, but work together if you start to get stuck.
 Discuss these questions as a group
 
 7.  Could your `Student` component be refactored into a functional component? Why or why not?
+    - No, because we need state.
 
 8.  What are the pros and cons of using a class method for an event handler vs. using an arrow function inline?
+    - PRO: No need to bind
+    - CON: Depending on the amount or complexity of the codebase, using arrow functions could make things less readable at first glance.
 
 9.  The render() method is called every time a component's state is updated. For a text input, that means the render method is called for every keypress. Why isn't this bad for performance?
+    - Just because render runs doesn't mean the whole DOM 9or even par of it) is being rerendered (yay Virtual DOM)
